@@ -1,0 +1,140 @@
+/* Tipografia de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Paleta de Colores */
+:root {
+    --color-principal: #000000;
+    --color-secundario: #ffffff;
+    --color-acento: #add8e6;
+}
+
+
+
+/* Estilos Generales */
+
+* {
+    font-family: "Roboto", sans-serif;
+    color: var(--color-principal);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.body {
+    background: linear-gradient(90deg, var(--color-secundario) 35%, var(--color-acento) 100%);
+}
+
+
+/* Titulos */
+.h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    padding: 0.2rem;
+}
+
+.h2 {
+    font-weight: 628;
+    font-size: 2.25rem;
+    padding: 0.2rem;
+}
+
+.h3 {
+    font-weight: 586;
+    font-size: 2rem;
+    padding: 0.2rem;
+}
+
+.h4 {
+    font-weight: 544;
+    font-size: 1.75rem;
+    padding: 0.2rem;
+}
+
+.h5 {
+    font-weight: 502;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+}
+
+.h6 {
+    font-weight: 460;
+    font-size: 1.25rem;
+    padding: 0.2rem;
+}
+
+/* Parrafos */
+.p {
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0.2rem;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.headerUl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+/* Main */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section {
+    padding: 20px;
+    margin-bottom: 0.3rem;
+}
+
+.article {
+    padding: 20px;
+}
+
+.video {
+    padding-left: 20px;
+}
+
+.figure {
+    padding-bottom: 0.3rem;
+}
+
+
+.mainUl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.8rem;
+    list-style-type: none;
+}
+
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
