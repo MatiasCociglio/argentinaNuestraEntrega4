@@ -104,10 +104,20 @@
 .section {
     padding: 20px;
     margin-bottom: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.3rem;
 }
 
 .article {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.3rem;
 }
 
 .video {
