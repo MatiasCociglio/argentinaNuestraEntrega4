@@ -2,6 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+/* Estilos Generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 /* Paleta de Colores */
 :root {
     --color-principal: #000000;
@@ -11,18 +20,9 @@
 
 
 
-/* Estilos Generales */
-
-* {
+.body {
     font-family: "Roboto", sans-serif;
     color: var(--color-principal);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-.body {
     background: linear-gradient(90deg, var(--color-secundario) 35%, var(--color-acento) 100%);
 }
 
@@ -71,6 +71,10 @@
     padding: 0.2rem;
 }
 
+/* Enlaces */
+.enlace {
+    color: var(--color-principal);
+}
 
 /* Header */
 
