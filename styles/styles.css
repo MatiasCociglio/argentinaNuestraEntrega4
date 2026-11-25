@@ -73,7 +73,7 @@
 
 .header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
@@ -81,23 +81,18 @@
 
 .headerUl {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    list-style-type: none;
-}
-
-/* Main */
-
-
-.main {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    list-style-type: none;
 }
+
+.imagenLogo {
+    width: 19rem;
+}
+
+/* Main */
 
 
 .section {
@@ -111,7 +106,7 @@
 }
 
 .article {
-    padding: 20px;
+    padding: 0.75rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -120,11 +115,23 @@
 }
 
 .video {
-    padding: 20px;
+    width: 16rem;
+}
+
+.videoGrande {
+    width: 16rem;
+}
+
+.imagen {
+    width: 15rem;
+}
+
+.imagenComidas {
+    width: 15rem;
 }
 
 .figure {
-    padding: 20px;
+    margin-bottom: 0.9rem;
 }
 
 
@@ -133,18 +140,23 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
     list-style-type: none;
 }
 
+
+/* Grid */
+
+
 .layoutGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 0.2fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.5fr 1.5fr;
     grid-template-areas:
-        "seccion1 seccion2 seccion2"
-        "seccion3 seccion3 seccion3";
-    gap: 1rem;
+        "seccion1"
+        "seccion2"
+        "seccion3";
+    gap: 0.3rem;
 }
 
 .seccion1 {
@@ -160,17 +172,18 @@
 }
 
 .contenedorGrid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 0.3fr repeat(2, 1fr);
-        grid-template-areas:
-            "fila1 fila1"
-            "celda1 celda2"
-            "celda3 celda4";
-        gap: 1rem;
-        padding: 20px;
-        margin-bottom: 0.3rem;
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr repeat(4, 1fr);
+    grid-template-areas:
+        "fila1"
+        "celda1"
+        "celda2"
+        "celda3"
+        "celda4";
+    gap: 0.4rem;
+    padding: 20px;
+}
 
 .gridFila1 {
     grid-area: fila1;
@@ -193,12 +206,111 @@
     grid-area: celda4;
 }
 
+
+
 /* Footer */
 
 .footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
+}
+
+
+/* Responsividad */
+@media (min-width: 768px) {
+
+    .headerUl {
+        gap: 1rem;
+    }
+
+    .imagenLogo {
+        width: 27rem;
+    }
+
+    .mainUl {
+        gap: 1.5rem;
+    }
+
+    .article {
+        padding: 20px;
+    }
+
+    .figure {
+        margin-bottom: 0;
+        padding: 20px;
+    }
+
+    .imagen {
+        width: 42rem;
+    }
+
+    .video {
+        padding: 20px;
+        width: 31rem;
+    }
+
+    .videoGrande {
+        padding: 20px;
+        width: 18rem;
+    }
+
+    .layoutGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 0.2fr 2fr;
+        grid-template-areas:
+            "seccion1 seccion2 seccion2"
+            "seccion3 seccion3 seccion3";
+        gap: 1rem;
+    }
+
+    .contenedorGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.3fr repeat(2, 1fr);
+        grid-template-areas:
+            "fila1 fila1"
+            "celda1 celda2"
+            "celda3 celda4";
+        gap: 1rem;
+        padding: 20px;
+        margin-bottom: 0.3rem;
+    }
+
+
+    .footer {
+        gap: 1.5rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+
+    .header {
+        flex-direction: row;
+    }
+
+
+    .headerUl {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .contenedorGrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 0.05fr 1fr;
+        grid-template-areas:
+            "fila1 fila1 fila1 fila1"
+            "celda1 celda2 celda3 celda4";
+        gap: 1rem;
+    }
+
+    .footer {
+        flex-direction: row;
+        gap: 1rem;
+    }
 }
