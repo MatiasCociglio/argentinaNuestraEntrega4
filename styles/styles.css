@@ -90,6 +90,7 @@
 
 /* Main */
 
+
 .main {
     display: flex;
     flex-direction: column;
@@ -97,6 +98,7 @@
     align-items: center;
     gap: 0.5rem;
 }
+
 
 .section {
     padding: 20px;
@@ -135,6 +137,61 @@
     list-style-type: none;
 }
 
+.layoutGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.2fr 2fr;
+    grid-template-areas:
+        "seccion1 seccion2 seccion2"
+        "seccion3 seccion3 seccion3";
+    gap: 1rem;
+}
+
+.seccion1 {
+    grid-area: seccion1;
+}
+
+.seccion2 {
+    grid-area: seccion2;
+}
+
+.seccion3 {
+    grid-area: seccion3;
+}
+
+.contenedorGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.3fr repeat(2, 1fr);
+        grid-template-areas:
+            "fila1 fila1"
+            "celda1 celda2"
+            "celda3 celda4";
+        gap: 1rem;
+        padding: 20px;
+        margin-bottom: 0.3rem;
+    }
+
+.gridFila1 {
+    grid-area: fila1;
+}
+
+
+.gridCelda1 {
+    grid-area: celda1;
+}
+
+.gridCelda2 {
+    grid-area: celda2;
+}
+
+.gridCelda3 {
+    grid-area: celda3;
+}
+
+.gridCelda4 {
+    grid-area: celda4;
+}
 
 /* Footer */
 
